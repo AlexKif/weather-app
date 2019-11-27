@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="649e3597-6156-40a8-8592-ade8384b195b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/weatherActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Weather/Weather.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Weather/WeatherForm/WeatherForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Weather/WeatherList/WeatherList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Weather/WeatherList/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Weather/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constans/weatherConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/urlHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/weatherReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/weatherService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Weather/WeatherList/WeatherList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/WeatherList/WeatherList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Weather/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/style.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +34,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../littleredwagon" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -74,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1574681053817</updated>
       <workItem from="1574681054876" duration="30325000" />
-      <workItem from="1574783297909" duration="28101000" />
+      <workItem from="1574783297909" duration="28643000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 
 
 function WeatherList(props) {
+
     let isWeather = Object.keys(props.weather).length !== 0;
     let month = [
         "January", "February", "March",
@@ -10,14 +11,8 @@ function WeatherList(props) {
         "October", "November", "December"
     ];
 
-    // let testMonth = props.weather.data.valid_date;
-    // console.log(testMonth);
-
     let weather;
     if (isWeather) {
-        // let testMonth = props.weather.data[0].valid_date;
-        // testMonth = testMonth.split('-')[1];
-        // console.log(testMonth);
         weather = props.weather.data.map((weather, index) => {
             const currentMonth = weather.valid_date.split('-')[1];
             const currentDate = weather.valid_date.split('-')[2];
