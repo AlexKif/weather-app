@@ -1,20 +1,35 @@
-import React from 'react';
-import {Button, Col, Form, FormGroup, Input, Label} from "reactstrap";
+import React, {Fragment} from 'react';
+import {Button, Input} from "reactstrap";
 
-function WeatherForm(props) {
-    return (
-        <Form className="city-form">
-            <FormGroup row className="justify-content-center">
-                <Col xs="3" className="city-form__item">
-                    <Label for="exampleCity">City</Label>
-                    <Input type="text" name="city" id="exampleCity"/>
-                </Col>
-                <Col xs="auto">
-                    <Button>Submit</Button>
-                </Col>
-            </FormGroup>
-        </Form>
-    );
+class WeatherForm extends React.Component {
+
+    state = {
+        cityValue: ''
+    };
+
+    handleChange = (event) => {
+        this.setState({cityValue: event.target.value})
+    };
+
+    clickBtn = () => {
+        this.props.clickWeather(this.state.cityValue);
+        this.setState({cityValue: ''})
+    };
+
+    keyPressed = (event) => {
+        if (event.key === 'Enter') {
+            this.clickBtn()
+        }
+    };
+
+    render() {
+        return (
+            <div className="city-form">
+                <Input placeholder="Enter city" type="text" onChange={this.handleChange} value={this.state.cityValue} onKeyPress={this.keyPressed} />
+                <Button color="primary" onClick={this.clickBtn}>Search</Button>
+            </div>
+        );
+    }
 }
 
 export default WeatherForm;

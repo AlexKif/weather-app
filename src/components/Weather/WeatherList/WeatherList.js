@@ -11,25 +11,29 @@ function WeatherList(props) {
         "October", "November", "December"
     ];
 
+    const detail = () => {
+        props.clickWeather('xxx')
+    };
+
     let weather;
     if (isWeather) {
         weather = props.weather.data.map((weather, index) => {
             const currentMonth = weather.valid_date.split('-')[1];
             const currentDate = weather.valid_date.split('-')[2];
-            console.log(currentDate);
             return (
-                <Fragment key={index}>
-                    <div className="weather__box">
-                        <p>{currentDate} {month[currentMonth-1]}</p>
-                        <p>Min: {weather.min_temp} Max: {weather.max_temp}</p>
+                <div className="weather__box" onClick={detail} key={index}>
+                    <div className="weather__box-date">
+                        <p className="currentDate">{currentDate}</p>
+                        <p> {month[currentMonth - 1]}</p>
                     </div>
-                </Fragment>
-            )
+                    <p>Min: {Math.round(weather.min_temp)}&deg;, Max: {Math.round(weather.max_temp)}&deg;</p>
+                </div>
+            );
             }
         );
     }
     return (
-        <div className="weather">
+        <div className={isWeather ? "weather" : ""}>
             {weather}
         </div>
     );

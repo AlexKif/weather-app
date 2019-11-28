@@ -1,5 +1,4 @@
 import React, {Fragment} from 'react';
-import {urlHelper} from "../../helpers/urlHelper";
 import {weatherServices} from "../../services/weatherService";
 import {addCity} from "../../actions/weatherActions";
 import {connect} from "react-redux";
@@ -8,25 +7,30 @@ import WeatherForm from "./WeatherForm/WeatherForm";
 import WeatherList from "./WeatherList/WeatherList";
 
 import './style.scss'
+import SelectedCities from "./SelectedCities/SelectedCities";
 
 class Weather extends React.Component{
 
-    componentDidMount() {
-        const { dispatch, location } = this.props;
-        const cityValue = urlHelper.getUrlParameter('city', location.search);
-        if (location.search) {
-            weatherServices.getSities(cityValue).then(city => {
-                dispatch(addCity(city));
-            });
-        }
-    }
+    state = {
+        cities: [],
+        city: ''
+    };
 
-
+    clickWeather = (value) => {
+        const { dispatch } = this.props;
+        const cities = this.state.cities;
+        weatherServices.getSities(value).then(city => {
+            cities.push(value);
+            this.setState({cities: cities});
+            dispatch(addCity(city));
+        });
+    };
 
     render() {
         return (
             <Fragment>
-                <WeatherForm/>
+                <WeatherForm clickWeather={this.clickWeather}/>
+                <SelectedCities/>
                 <WeatherList weather={this.props.cityWeather}/>
             </Fragment>
         );
