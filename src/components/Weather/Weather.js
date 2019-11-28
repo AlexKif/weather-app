@@ -21,7 +21,7 @@ class Weather extends React.Component{
         const cities = this.state.cities;
         weatherServices.getSities(value).then(city => {
             cities.push(value);
-            this.setState({cities: cities});
+            this.setState({cities: cities, city: value});
             dispatch(addCity(city));
         });
     };
@@ -30,7 +30,7 @@ class Weather extends React.Component{
         return (
             <Fragment>
                 <WeatherForm clickWeather={this.clickWeather}/>
-                <SelectedCities/>
+                <SelectedCities city={this.state.city}/>
                 <WeatherList weather={this.props.cityWeather}/>
             </Fragment>
         );
